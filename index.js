@@ -1,9 +1,14 @@
-import express from 'express';
+import express, {json} from 'express';
 import cors from 'cors';
+import dotenv from 'dotenv';
 
+dotenv.config();
 
+const port = process.env.PORT;
 const server = express();
-server.use(cors()).use(express.json())
+
+server.use(cors())
+    .use(json())
 
 const users = [
     {
@@ -27,34 +32,63 @@ const tweets = [
 ];
 
 server.post('/sign-up', (req, res) => {
-    if (!req.body.username || !req.body.avatar) {
-        res.status(400).send({ message: "Todos os campos são obrigatórios" });
-        return
+    const { username, avatar } = req.body;
+
+    if (!username || !avatar) {
+      res.status(400).send('Todos os campos são obrigatórios!');
+      return;
     }
 
-    users.push(req.body)
+    usuarios.push({ username, avatar });
+
     res.status(201).send({ message: 'OK' })
 })
 
 server.post('/tweets', (req, res) => {
-    if (!req.body.username || !req.body.tweet) {
-        res.status(400).send({ message: "Não é possível enviar um tweet vazio, escreva algo" });
-        return
-    }
+  const { tweet, username } = req.body;
 
-    tweets.push(req.body)
+  if (!username || !tweet) {
+    return res.status(400).send('Todos os campos são obrigatórios!');
+  }
+
+  const { avatar } = usuarios.find(user => user.username === username);
+
+  tweets.push({ username, tweet, avatar });
+  
     res.status(201).send({ message: 'OK' })
 })
 
+server.get('/tweets/:username', (req, res) => {
+    const { username } = req.params;
+  
+    const tweetsDoUsuario = tweets.filter(t => t.username === username);
+  
+    res.status(200).send(tweetsDoUsuario);
+  });
+
 server.get('/tweets', (req, res) => {
-    let newTweets = [];
+    const { page } = req.query;
+
+    const newTweets = [];
+    const limite = 10;
+    const start = (page - 1) * limite;
+    const end = page * limite;
+
+    if (page && page < 1) {
+        res.status(400).send('Informe uma página válida!');
+        return;
+    }
+  
     for (let i = 0; i < tweets.length; i++) {
         let filteredAvatar = users.filter(user => user.username === tweets[i].username)[0].avatar;
         newTweets.push({ ...tweets[i], avatar: filteredAvatar })
     }
-    res.send(newTweets.slice(- 10).reverse())
+    
+    if (tweets.length <= 10) {
+      return res.send([...newTweets].reverse());
+    }
+
+    res.status(200).send([...newTweets].reverse().slice(start, end));
 })
 
-
-
-server.listen(5000)
+server.listen(port, () => console.log("Listening to port " + port))
