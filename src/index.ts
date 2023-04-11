@@ -6,7 +6,7 @@ import tweetRouter from './routers/tweets.router.js';
 
 dotenv.config();
 
-const port = process.env.PORT;
+const port = process.env.PORT || 5000;
 const server = express();
 
 server.use(cors())
