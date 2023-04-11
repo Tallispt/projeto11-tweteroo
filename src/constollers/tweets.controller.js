@@ -1,4 +1,4 @@
-import authControllers from "./auth.controllers.js";
+import authController from "./auth.controller.js";
 
 class TweetController{
     constructor(){
@@ -15,7 +15,7 @@ class TweetController{
           return res.status(400).send('Todos os campos são obrigatórios!');
         }
 
-        const { avatar } = authControllers.getLoggedUser(username)
+        const { avatar } = authController.getLoggedUser(username)
       
         this.tweets.push({ username, tweet, avatar });
       

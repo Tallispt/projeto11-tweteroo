@@ -1,8 +1,8 @@
 import express, {json} from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import authRouter from './routers/auth.router';
-import tweetRouter from './routers/tweets.router';
+import authRouter from './routers/auth.router.js';
+import tweetRouter from './routers/tweets.router.js';
 
 dotenv.config();
 
