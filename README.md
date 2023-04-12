@@ -16,7 +16,7 @@ Descrition
 
 Description
 
-#### Other version:
+#### Other versions:
 - ### [Tweteroo API in Java](https://github.com/Tallispt/tweetero-api-java)
 
 Descrition
