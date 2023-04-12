@@ -48,3 +48,48 @@ The api will be available at http://localhost:5000.
 
 ## Routers
 
+- ### /sign-up
+
+#### POST
+
+```json
+//request body
+{
+  "username": "String",
+  "avatar": "Image-URL"
+}
+```
+
+- ### /tweets
+
+#### POST
+
+```json
+//request body
+{
+  "username": "String",
+  "tweet": "String"
+}
+```
+
+#### GET
+
+```json
+//response body
+[
+  {
+    "username": "String",
+    "tweet": "String",
+    "avatar": "Image-URL"
+  }
+]
+```
+
+*Request Params*
+
+- **/:username**  
+  - GET tweets by *username*  
+
+*Query string*  
+- **?page=***{number}*
+  - GET tweets with *pagination*  
