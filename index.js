@@ -12,10 +12,6 @@ server.use(cors())
 
 const users = [
     {
-        username: 'tallispt',
-        avatar: 'https://super.abril.com.br/wp-content/uploads/2020/05/si_416_consciencia_01.png'
-    },
-    {
         username: "bobesponja",
         avatar: "https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=70&strip=info"
     }
@@ -24,10 +20,6 @@ const tweets = [
     {
         username: "bobesponja",
         tweet: "eu amo o hub"
-    },
-    {
-        username: "tallispt",
-        tweet: "primeiro tweet"
     }
 ];
 
