@@ -4,10 +4,6 @@ Description
 
 ## Branches Versions
 
-- ### Tweetero API
-
-The main branch. You are here!
-
 - ### [Tweteroo API OOP-JS](https://github.com/Tallispt/tweteroo/tree/oop-js)
 
 Descrition
