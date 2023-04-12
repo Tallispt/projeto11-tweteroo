@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateUserService } from "./createUserService";
+import { CreateUserService } from "./createUserService.js";
 
 export default class CreateUserController {
   constructor(private createUserService: CreateUserService) {}

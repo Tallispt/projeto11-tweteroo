@@ -1,6 +1,6 @@
-import { TweetRepository } from "../../../repositories/tweetRepository";
-import { CreateTweetController } from "./createTweetController";
-import { CreateTweetService } from "./createTweetService";
+import { TweetRepository } from "../../../repositories/tweetRepository.js";
+import { CreateTweetController } from "./createTweetController.js";
+import { CreateTweetService } from "./createTweetService.js";
 
 const tweetRepository = TweetRepository.getInstance();
 const createTweetService = new CreateTweetService(tweetRepository);

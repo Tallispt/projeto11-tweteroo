@@ -1,6 +1,5 @@
-import { Tweet } from "../../../models/Tweet";
-import { TweetRepository } from "../../../repositories/tweetRepository";
-import { getLoggedUserService } from "../../Users/getLoggedUser";
+import { TweetRepository } from "../../../repositories/tweetRepository.js";
+import { getLoggedUserService } from "../../Users/getLoggedUser/index.js";
 
 interface IRequestTweet {
   username: string;

@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { createTweetController } from "../useCase/Tweets/createTweet";
-import { getAllTweetsController } from "../useCase/Tweets/getAllTweets";
-import { getTweetByUserController } from "../useCase/Tweets/getTweetByUser";
+import { createTweetController } from "../useCase/Tweets/createTweet/index.js";
+import { getAllTweetsController } from "../useCase/Tweets/getAllTweets/index.js";
+import { getTweetByUserController } from "../useCase/Tweets/getTweetByUser/index.js";
 
 const tweetRouter = Router();
 

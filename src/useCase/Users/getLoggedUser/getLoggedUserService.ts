@@ -1,5 +1,5 @@
-import { User } from "../../../models/Users";
-import { UserRepository } from "../../../repositories/userRepository";
+import { User } from "../../../models/Users.js";
+import { UserRepository } from "../../../repositories/userRepository.js";
 
 export class GetLoggedUserService {
   constructor(private userRepository: UserRepository) {}

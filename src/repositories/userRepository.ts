@@ -1,4 +1,4 @@
-import { User } from "../models/Users";
+import { User } from "../models/Users.js";
 
 export class UserRepository {
   private users: User[];

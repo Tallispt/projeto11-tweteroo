@@ -1,5 +1,5 @@
-import { Tweet } from "../../../models/Tweet";
-import { TweetRepository } from "../../../repositories/tweetRepository";
+import { Tweet } from "../../../models/Tweet.js";
+import { TweetRepository } from "../../../repositories/tweetRepository.js";
 
 export class GetTweetByUserService {
   constructor(private tweetRepository: TweetRepository) {}

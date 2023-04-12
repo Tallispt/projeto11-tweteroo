@@ -1,6 +1,6 @@
-import { UserRepository } from "../../../repositories/userRepository";
-import CreateUserController from "./createUserController";
-import { CreateUserService } from "./createUserService";
+import { UserRepository } from "../../../repositories/userRepository.js";
+import CreateUserController from "./createUserController.js";
+import { CreateUserService } from "./createUserService.js";
 
 const userRepository = UserRepository.getInstance();
 const createUserService = new CreateUserService(userRepository);

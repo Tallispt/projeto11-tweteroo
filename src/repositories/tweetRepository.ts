@@ -1,4 +1,4 @@
-import { Tweet } from "../models/Tweet";
+import { Tweet } from "../models/Tweet.js";
 
 export class TweetRepository {
   private tweets: Tweet[];

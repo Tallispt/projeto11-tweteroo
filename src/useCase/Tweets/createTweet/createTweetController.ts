@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CreateTweetService } from "./createTweetService";
+import { CreateTweetService } from "./createTweetService.js";
 
 export class CreateTweetController {
   constructor(private createTweetService: CreateTweetService) {}
