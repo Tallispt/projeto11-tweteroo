@@ -53,7 +53,7 @@ The api will be available at http://localhost:5000.
 #### POST
 
 ```json
-//request body
+# Request body
 {
   "username": "String",
   "avatar": "Image-URL"
@@ -65,7 +65,7 @@ The api will be available at http://localhost:5000.
 #### POST
 
 ```json
-//request body
+# Request body
 {
   "username": "String",
   "tweet": "String"
@@ -75,7 +75,7 @@ The api will be available at http://localhost:5000.
 #### GET
 
 ```json
-//response body
+# Response body
 [
   {
     "username": "String",
