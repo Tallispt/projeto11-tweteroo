@@ -1,17 +1,18 @@
 # Tweteroo API
 
-This is a simple REST API project inspired by the backend of Twitter and was created as a proof of concept (POC). 
+This is a simple REST API project inspired by the backend of Twitter and was created as a proof of concept (POC).
+
 The project is implemented using JavaScript and utilizes the following technologies: dotenv for managing environment variables, Express for creating the web server and handling API endpoints, CORS for enabling cross-origin resource sharing, and Node.js as the runtime environment. 
 
 Here you can find the respective repository for the front end application [Tweteroo](https://github.com/Tallispt/tweteroo-front).
 
 ## Branches Versions
 
-- ### [Tweteroo API OOP-JS](https://github.com/Tallispt/tweteroo/tree/oop-js)
+- ### [Tweteroo API OOP-JS](https://github.com/Tallispt/tweteroo-api/tree/oop-js)
 
 A version using layered architecture and *objects oriented programming*.
 
-- ### [Tweteroo API OOP-TS](https://github.com/Tallispt/tweteroo/tree/oop-ts)
+- ### [Tweteroo API OOP-TS](https://github.com/Tallispt/tweteroo-api/tree/oop-ts)
 
 A version using layered architecture and objects oriented programming in *TypeScript*.
 
