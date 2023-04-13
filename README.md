@@ -8,11 +8,11 @@ Here you can find the respective repository for the front end application [Twete
 
 ## Branches Versions
 
-- ### [Tweetero API](https://github.com/Tallispt/tweteroo/tree/main)
+- ### [Tweetero API](https://github.com/Tallispt/tweteroo-api/tree/main)
 
 The main branch. A *simple* version of tweteroo rest-api.
 
-- ### [Tweteroo API OOP-JS](https://github.com/Tallispt/tweteroo/tree/oop-js)
+- ### [Tweteroo API OOP-JS](https://github.com/Tallispt/tweteroo-api/tree/oop-js)
 
  version using layered architecture and *objects oriented programming*.
 
